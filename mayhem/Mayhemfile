@@ -1,0 +1,6 @@
+project: textdistance.rs
+target: fuzz_textdistance
+
+cmds:
+    - cmd: ./fuzz_textdistance
+      libfuzzer: true
