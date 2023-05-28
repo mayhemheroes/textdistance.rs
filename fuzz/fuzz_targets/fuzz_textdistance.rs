@@ -5,7 +5,7 @@ use std::str;
 use textdistance::{
     Algorithm, 
     Bag, Cosine, DamerauLevenshtein, EntropyNCD, Hamming, Jaccard, Jaro, JaroWinkler,
-    LCSSeq, LCSStr, Length, Levenshtein, Overlap, Prefix, RatcliffObershelp, Roberts, Sift4Common,
+    LCSSeq, LCSStr, Length, Levenshtein, Overlap, Prefix, RatcliffObershelp, Roberts,
     Sift4Simple, SmithWaterman, SorensenDice, Suffix, Tversky, YujianBo, LIG3, MLIPNS,
 };
 
@@ -66,30 +66,27 @@ fuzz_target!(|data: &[u8]| {
                         Roberts::default().for_str(str1, str2);
                     }
                     16 => {
-                        Sift4Common::default().for_str(str1, str2);
-                    }
-                    17 => {
                         Sift4Simple::default().for_str(str1, str2);
                     }
-                    18 => {
+                    17 => {
                         SmithWaterman::default().for_str(str1, str2);
                     }
-                    19 => {
+                    18 => {
                         SorensenDice::default().for_str(str1, str2);
                     }
-                    20 => {
+                    19 => {
                         Suffix::default().for_str(str1, str2);
                     }
-                    21 => {
+                    20 => {
                         Tversky::default().for_str(str1, str2);
                     }
-                    22 => {
+                    21 => {
                         YujianBo::default().for_str(str1, str2);
                     }
-                    23 => {
+                    22 => {
                         LIG3::default().for_str(str1, str2);
                     }
-                    24 => {
+                    23 => {
                         MLIPNS::default().for_str(str1, str2);
                     }
                     _ => (),
