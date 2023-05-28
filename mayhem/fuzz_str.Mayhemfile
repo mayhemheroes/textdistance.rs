@@ -1,4 +1,4 @@
-project: textdistance
+project: textdistance-rs
 target: fuzz-str
 
 cmds:
