@@ -1,0 +1,18 @@
+[package]
+name = "fuzz-map2"
+version = "0.0.0"
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+honggfuzz = "0.5.55"
+textdistance = { path = ".." }
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_str"
+path = "fuzz_targets/fuzz_str.rs"

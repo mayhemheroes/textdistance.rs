@@ -1,0 +1,5 @@
+project: textdistance
+target: fuzz-str
+
+cmds:
+    - cmd: /fuzz_str
